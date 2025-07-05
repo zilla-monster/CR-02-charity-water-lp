@@ -1,3 +1,25 @@
+/* Split the main content into left and right segments */
+.main-split {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.main-left, .main-right {
+  flex: 1 1 0;
+  min-width: 300px;
+}
+
+@media (max-width: 900px) {
+  .main-split {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+}
 /* charity: water Brand Colors & Fonts
 
 Primary Colors:
@@ -24,12 +46,17 @@ Fonts:
 */
 
 body {
-      margin: 0;
-      font-family: 'Proxima Nova', sans-serif;
-      background-color: #fff;
-      color: #4a2c1d;
-      line-height: 1.6;
-    }
+  margin: 0;
+  font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  color: #bf6c46;
+  line-height: 1.6;
+}
+
+/* Make sure all text uses Proxima Nova font */
+h1, h2, h3, h4, h5, h6, p, span, button, a, li, label, input, textarea {
+  font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+}
 
     header {
       display: flex;
@@ -53,7 +80,7 @@ body {
       flex: 1 1 300px;
       background-color: #ffd33c;
       padding: 2rem;
-      color: #000;
+      color: #fff; /* Changed to white for better contrast */
     }
 
     .hero-text h1 {
@@ -61,11 +88,23 @@ body {
       margin: 0 0 1rem;
     }
 
-    .hero-text p {
-      font-size: 1rem;
-      margin: 1rem 0;
-      color: #843c24;
-    }
+
+/* Style for the paragraph outside the yellow box in the hero section */
+.hero-description {
+  font-size: 1rem;
+  margin: 1rem 0 0 0;
+  color: #843c24;
+  padding: 1rem 2rem 0 2rem; /* Add some space to match the hero section */
+}
+
+
+/* Style for the caption next to the CTA button */
+.cta-caption {
+  color: #FFC907; /* Same yellow as the button */
+  font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+}
+/* The .cta class is already styled for the button outside the yellow box */
 
     .hero-image {
       flex: 1 1 300px;
@@ -75,7 +114,18 @@ body {
     .hero-image img {
       width: 100%;
       height: auto;
-      border-radius: 5px;
+      border-radius: 0;
+    }
+
+    .hero-image span {
+      position: relative;
+      bottom: 28px;
+      left: 10px;
+      color: #fff;
+      font-size: 0.9rem;
+      background-color: rgba(0,0,0,0.4);
+      padding: 2px 6px;
+      border-radius: 0;
     }
 
     .impact {
@@ -104,33 +154,42 @@ body {
 
     .impact-gallery img {
       width: 100%;
-      border-radius: 5px;
+      border-radius: 0px;
     }
 
     .impact-gallery span {
-      position: absolute;
-      bottom: 5px;
-      left: 10px;
+      position: relative;
+      bottom: 28px;
+      right: 35px;
       color: #fff;
       font-size: 0.9rem;
       background-color: rgba(0,0,0,0.4);
       padding: 2px 6px;
-      border-radius: 3px;
+      border-radius: 0px;
     }
 
-    .cta {
-      text-align: center;
-      margin: 2rem 0;
-    }
+
+/* Light yellow box background for the CTA area */
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #fff7e1; /* Light yellow */
+  border-radius: 0;
+  padding: 1rem 2rem;
+  margin: 2rem 0;
+  text-align: center;
+}
 
     .cta button {
       background-color: #ffd33c;
       border: none;
-      color: #000;
+      color: #ffffff;
       padding: 1rem 2rem;
       font-size: 1rem;
       cursor: pointer;
-      border-radius: 5px;
+      border-radius: 0px;
       font-weight: bold;
     }
 
