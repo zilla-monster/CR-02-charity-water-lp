@@ -86,7 +86,7 @@ body {
     .impact h2 {
       font-size: 2rem;
       color: #843c24;
-      font-family: 'Avenir';
+      font-family: 'Avenir', sans-serif;
       margin-bottom: 1.5rem;
     }
 
