@@ -47,7 +47,7 @@ Fonts:
 
 body {
   margin: 0;
-  font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+  font-family: 'Proxima Nova Light', 'Proxima Nova', Arial, Helvetica, sans-serif;
   background-color: #fff;
   color: #bf6c46;
   line-height: 1.6;
@@ -55,7 +55,7 @@ body {
 
 /* Make sure all text uses Proxima Nova font */
 h1, h2, h3, h4, h5, h6, p, span, button, a, li, label, input, textarea {
-  font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+  font-family: 'Proxima Nova Light', 'Proxima Nova', Arial, Helvetica, sans-serif;
 }
 
     header {
@@ -81,7 +81,17 @@ h1, h2, h3, h4, h5, h6, p, span, button, a, li, label, input, textarea {
       background-color: #ffd33c;
       padding: 2rem;
       color: #fff; /* Changed to white for better contrast */
+  position: relative; /* Needed for sun positioning */
     }
+/* Sun SVG in bottom right of yellow hero background */
+.sun-svg {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 60px;
+  height: 60px;
+  pointer-events: none;
+}
 
     .hero-text h1 {
       font-size: 2.5rem;
@@ -101,7 +111,7 @@ h1, h2, h3, h4, h5, h6, p, span, button, a, li, label, input, textarea {
 /* Style for the caption next to the CTA button */
 .cta-caption {
   color: #FFC907; /* Same yellow as the button */
-  font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+  font-family: 'Proxima Nova Light','Proxima Nova', Arial, Helvetica, sans-serif;
   font-size: 1.1rem;
 }
 /* The .cta class is already styled for the button outside the yellow box */
@@ -136,7 +146,7 @@ h1, h2, h3, h4, h5, h6, p, span, button, a, li, label, input, textarea {
     .impact h2 {
       font-size: 2rem;
       color: #843c24;
-      font-family: 'Avenir', sans-serif;
+      font-family: 'Proxima Nova Light','Proxima Nova', Arial, Helvetica, sans-serif;
       margin-bottom: 1.5rem;
     }
 
@@ -144,12 +154,13 @@ h1, h2, h3, h4, h5, h6, p, span, button, a, li, label, input, textarea {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 1rem;
+      gap: 1rem 1rem; /* 1rem vertical and 1rem horizontal gap */
     }
 
     .impact-gallery div {
       width: 200px;
       position: relative;
+      margin: 0;
     }
 
     .impact-gallery img {
